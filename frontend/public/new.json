@@ -1,0 +1,85 @@
+{
+    "name": "Harsh Jaiswal",
+    "email": "harshrajaiswall6012003@gmail.com",
+    "phone": "91 7754938396",
+    "skills": [
+      "Python",
+      "Java",
+      "C",
+      "NumPy",
+      "Pandas",
+      "Scikit-Learn",
+      "OpenCV",
+      "Matplotlib",
+      "Tensorflow",
+      "Pytorch",
+      "Plotly",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Flask Web Framework",
+      "Laravel Framework",
+      "Bootstrap",
+      "Problem Solving",
+      "Mathematics",
+      "Android Development"
+    ],
+    "experience": [
+      {
+        "position": "Software Developer Intern",
+        "company": "BytecodeX Technology Private Ltd.",
+        "start_date": "01/2024",
+        "end_date": "10/2024",
+        "location": "Lucknow",
+        "description": "Acquired knowledge of Bootstrap Framework for Web Development\nAcquired knowledge of Laravel Web Framework and utilized it to design \nBytecodeX Technology website.\nAcquired knowledge in Android Development and implemented it to \ncreate a Sales Tracking Android Application"
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Computer Applications",
+        "institution": "University of Lucknow",
+        "start_year": "10/2021",
+        "end_year": "05/2024",
+        "location": "Lucknow",
+        "gpa": "7.110"
+      },
+      {
+        "degree": "12th",
+        "institution": "S.K.D. Academy, Lucknow",
+        "start_year": "04/2020",
+        "end_year": "06/2021",
+        "location": "Lucknow",
+        "percentage": "92.2100"
+      },
+      {
+        "degree": "10th",
+        "institution": "S.K.D. Academy, Lucknow",
+        "start_year": "04/2018",
+        "end_year": "06/2019",
+        "location": "Lucknow",
+        "percentage": "84.2100"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Spam Detection System and Abusive Image Detection System",   
+        "description": "Build an Email Spam Detection System and Abusive Image Detection \nSystem using scikit-learn and tensorflow."
+      },
+      {
+        "title": "LuCrawler",
+        "description": "Build a final year project LuCrawler using Flask Web Framework."
+      },
+      {
+        "title": "Face Recognition Attendance System",
+        "description": "Build a project on Face Recognition Attendance System using python, \nOpenCV."
+      },
+      {
+        "title": "Mask Detection System",
+        "description": "Build a Mask Detection System using Tensorflow and OpenCV."
+      },
+      {
+        "title": "DoChat - A ChatRoom",
+        "description": "Build a ChatRoom, can also share files, using Flask Socket IO"
+      }
+    ]
+  }
