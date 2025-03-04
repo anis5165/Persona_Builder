@@ -6,7 +6,7 @@ const cors = require("cors");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const app = express();
-app.use(cors({ origin: "http://localhost:3000", methods: ["GET", "POST"] }));
+app.use(cors({ origin: "http://localhost:3001", methods: ["GET", "POST"] }));
 const upload = multer({ dest: "uploads/" });
 
 const genAI = new GoogleGenerativeAI("AIzaSyCaJuxMrnBuY29WDvkYX_MtUHtWrpVLeo0");
