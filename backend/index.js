@@ -9,7 +9,7 @@ const app = express();
 app.use(cors({ origin: "http://localhost:3001", methods: ["GET", "POST"] }));
 const upload = multer({ dest: "uploads/" });
 
-const genAI = new GoogleGenerativeAI("AIzaSyCaJuxMrnBuY29WDvkYX_MtUHtWrpVLeo0");
+const genAI = new GoogleGenerativeAI("Your_Gemini_Key");
 const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
 app.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
