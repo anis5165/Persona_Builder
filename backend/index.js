@@ -4,13 +4,14 @@ const pdf = require("pdf-parse");
 const fs = require("fs");
 const cors = require("cors");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+require("dotenv").config();
 
 const app = express();
-app.use(cors({ origin: "http://localhost:3001", methods: ["GET", "POST"] }));
+app.use(cors({ origin: "http://localhost:3000", methods: ["GET", "POST"] }));
 const upload = multer({ dest: "uploads/" });
 
-const genAI = new GoogleGenerativeAI("Your_Gemini_Key");
-const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+const genAI = new GoogleGenerativeAI(process.env.Gemini_API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
 
 app.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
   if (!req.file) {
@@ -28,7 +29,7 @@ app.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
     const response = result.response ? result.response : result; // Ensure correct handling
     const jsonOutput = response.text ? response.text() : response.text; // Check if text method exists
 
-    console.log("Raw response:", jsonOutput);
+    console.log("Raw response:", JSON.stringify(response, null, 2));
 
     const cleanedJson = jsonOutput.replace(/```json|```/g, "").trim();
 
