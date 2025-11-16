@@ -11,7 +11,7 @@ app.use(cors({ origin: "http://localhost:3000", methods: ["GET", "POST"] }));
 const upload = multer({ dest: "uploads/" });
 
 const genAI = new GoogleGenerativeAI(process.env.Gemini_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 app.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
   if (!req.file) {

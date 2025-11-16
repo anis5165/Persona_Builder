@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { Button } from './ui/button'
 import { Menu } from 'lucide-react'
+import Link from 'next/link';
 
 const Navbar = () => {
 
@@ -26,30 +27,33 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-              <a
+              <Link
                 href="#how-it-works"
                 className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 How It Works
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#features"
                 className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 Features
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#templates"
                 className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 Templates
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#faq"
                 className="text-foreground/70 hover:text-foreground transition-colors"
               >
                 FAQ
-              </a>
+              </Link>
+              <Link href="/contact" className="text-foreground/70 hover:text-foreground transition-colors">
+                Contact
+              </Link>
             </nav>
 
             {/* Desktop CTA */}
@@ -73,30 +77,30 @@ const Navbar = () => {
           {/* Mobile Navigation */}
           {isOpen && (
             <nav className="md:hidden pb-4 space-y-3">
-              <a
+              <Link
                 href="#how-it-works"
                 className="block text-foreground/70 hover:text-foreground transition-colors"
               >
                 How It Works
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#features"
                 className="block text-foreground/70 hover:text-foreground transition-colors"
               >
                 Features
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#templates"
                 className="block text-foreground/70 hover:text-foreground transition-colors"
               >
                 Templates
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#faq"
                 className="block text-foreground/70 hover:text-foreground transition-colors"
               >
                 FAQ
-              </a>
+              </Link>
               <div className="flex gap-2 pt-2">
                 <Button variant="outline" className="flex-1 bg-transparent">
                   Sign In

@@ -23,6 +23,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
+import { useRouter } from "next/navigation"
 
 export default function Home() {
   const [hoveredTemplateIndex, setHoveredTemplateIndex] = useState(null)
@@ -178,6 +179,8 @@ export default function Home() {
     }
   ]
 
+  const router = useRouter();
+
   return (
     <main className="min-h-screen bg-background">
       <section className="relative overflow-hidden py-8 md:py-12 lg:py-16">
@@ -203,6 +206,7 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
+                  onClick={() => router.push('/build-portfolio')}
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
