@@ -7,7 +7,9 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 require("dotenv").config();
 
 const app = express();
-app.use(cors({ origin: "http://localhost:3000", methods: ["GET", "POST"] }));
+app.use(cors({ origin: "http://localhost:3000", methods: ["GET", "POST"], credentials: true }));
+app.use(express.json());
+app.use('/api/users', require('./src/routers/user'));
 const upload = multer({ dest: "uploads/" });
 
 const genAI = new GoogleGenerativeAI(process.env.Gemini_API_KEY);
